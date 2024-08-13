@@ -1,0 +1,34 @@
+#Functions
+SELECT SUM(price) as "pricee";
+SELECT Min(price) as "Minimum pricee" FROM smp;
+SELECT count(price) as "Total Count" From smp;
+SELECT avg(price) as "Average" From smp;
+SELECT variance(price) as "Variance of price" From smp;
+SELECT std(price) as "Variance of price" From smp;
+SELECT distinct(price) as "dISTINCT of price" From smp;
+
+select SUM(price) as "pricee",Max(price) as "Maximum pricee",Min(price) as "Minimum pricee", avg(price) as "Average", variance(price) as "variance of price",
+std(price) as "Standard deviation of price" FROM smp;
+
+
+SELECT MIN(price) as "Maximun pricee" FROM smp;
+
+#Round of Function 
+select processor_speed , round(processor_speed),
+ceil(processor_speed),floor(processor_speed) FROM smp;
+select price , (price-100000), abs((price-100000)) from smp;
+select brand_name , count(*) as 'COUNT_MOB' from smp group by brand_name order by COUNT_MOB DESC limit 5;
+select brand_name , count(*)  from smp group by brand_name order by brand_name ASC;
+select brand_name, max(price) as 'maximum_price'  from smp group by brand_name order by brand_name ASC;
+select brand_name, max(price) as 'mini_price'  from smp group by brand_name order by mini_price asc limit 1 ;
+
+SELECT SUM(price) as "pricee" from smp;
+SELECT Min(price) as "Minimum pricee" FROM smp;
+SELECT count(price) as "Total Count" From smp;
+SELECT avg(price) as "Average" From smp;
+SELECT variance(price) as "Variance of price" From smp;
+SELECT std(price) as "Variance of price" From smp;
+SELECT distinct(price) as "dISTINCT of price" From smp;
+SELECT has_5g , count(has_5g='True') as '5g', count(has_5g='false') as '4g' from smp group by has_5g;
+select has_5g, count(*) from smp group by has_5g;
+select brand_name ,has_nfc,has_5g ,price, count(*) from smp group by brand_name ,has_nfc,has_5g,price ;
