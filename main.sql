@@ -28,18 +28,5 @@ Select *from smp order by brand_name asc;
 select *from smp where price>50000 and ram_capacity>8 order by brand_name desc;
 
 
-#Functions
-SELECT SUM(price) as "pricee";
-SELECT Min(price) as "Minimum pricee" FROM smp;
-SELECT count(price) as "Total Count" From smp;
-SELECT avg(price) as "Average" From smp;
-SELECT variance(price) as "Variance of price" From smp;
-SELECT std(price) as "Variance of price" From smp;
-SELECT distinct(price) as "dISTINCT of price" From smp;
 
-select SUM(price) as "pricee",Max(price) as "Maximum pricee",Min(price) as "Minimum pricee", avg(price) as "Average", variance(price) as "variance of price",
-std(price) as "Standard deviation of price" FROM smp;
-
-
-SELECT MIN(price) as "Maximun pricee" FROM smp;
 
