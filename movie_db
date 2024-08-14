@@ -1,0 +1,10 @@
+ use movie_db;
+ select *from  movie;
+SELECT count(distinct(Director)) FROM movie_db.movie;
+SELECT count(distinct(Genre)) FROM movie_db.movie;
+SELECT count(distinct(Director)) FROM movie_db.movie;
+select * from movie order by gross desc limit 5;
+select * from movie order by gross desc limit 1,1;
+select * from movie order by gross desc limit 1,1;
+select * from movie order by Runtime desc limit 1;
+select * from movie order by Runtime asc limit 1;
