@@ -1,0 +1,14 @@
+create database subquery;
+use subquery;
+select *from users;
+select user_id from `orders (1)`;
+select *from users;
+select users_id from `orders (1)`;
+select * from users where user_id not in (select user_id from `orders (1)`);
+select user_id from users;
+
+
+
+
+
+
