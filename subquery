@@ -1,0 +1,24 @@
+create database subquery;
+use subquery;
+select *from users;
+select user_id from `orders (1)`;
+select *from users;
+select users_id from `orders (1)`;
+select * from users where user_id not in (select user_id from `orders (1)`);
+select user_id from users;
+select genre,max(Score) from movies where votes>25000 group by genre;
+select * from movies where (genre,score) in (select genre,max(Score) from movies where votes>25000 group by genre);
+select count(*) from movies;
+select * from movies;
+select avg(score) from movies;
+select count(*) from movies where score>(select avg(score) from movies);
+select * from movies where score>(select avg(score) from movies) and genre>(select avg(genre) from movies);
+
+select *from movies m1
+where score>(select avg(score) from movies m2
+where m2.genre=m1.genre);
+
+
+
+
+
