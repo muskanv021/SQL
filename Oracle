@@ -1,0 +1,27 @@
+select *from employees;
+select count(*) from employees;
+
+select employee_id, first_name ,hire_date from employees;
+select first_name ,substr(first_name, 2,4) from employees;
+select concat(first_name + ' '+ last_name) from employees;
+SELECT first_name + ' ' + last_name FROM employees;
+select *from employees;
+select first_name, trim(leading 'A' from first_name) from employees;
+select first_name, trim(trailing'a' from first_name) from employees;
+select first_name, trim(both 'a' from first_name) from employees;
+
+select first_name, replace(first_name , 'a', '-') from employees;
+
+select round(15.92) from dual;
+select current_timestamp from dual;
+select sysdate from dual;
+select hire_date, current_date,round( months_between(current_date,hire_date)) from employees;
+select hire_date, current_date,round( months_between(current_date,hire_date))/12 from employees;
+select hire_date, current_date,round(round( months_between(current_date,hire_date))/12) from employees;
+select hire_date, current_date,round((round( months_between(current_date,hire_date))/12)) from employees;
+select first_name ||' '|| last_name as full_name from employees;
+select hire_date , EXTRACT(year from hire_date ) from employees;
+select hire_date , EXTRACT(month from hire_date ) from employees;
+select hire_date , EXTRACT(day from hire_date ) from employees;
+select next_day('11-sep-2024','sunday' ) from dual;
+select last_day('11-sep-2024') from dual;
